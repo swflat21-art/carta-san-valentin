@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Nuestra Historia ❤️</title>
+
+<style>
+body{
+  margin:0;
+  background: linear-gradient(135deg,#ff9a9e,#fad0c4);
+  font-family: Arial, Helvetica, sans-serif;
+  text-align:center;
+  color:white;
+}
+
+.carta{
+  margin-top:60px;
+}
+
+h1{
+  font-size:2.5rem;
+}
+
+p{
+  font-size:1.2rem;
+}
+
+#contador{
+  margin-top:20px;
+  font-size:1.4rem;
+  font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="carta">
+  <h1>Para el amor de mi vida 💕</h1>
+
+  <p>Si pudiera elegir un lugar seguro, sería a tu lado.</p>
+  <p>Cuanto más tiempo estoy contigo más te amo.</p>
+
+  <div id="contador"></div>
+</div>
+
+<script>
+const inicio = new Date("2024-01-01 00:00:00").getTime(); // cambia por tu fecha
+
+setInterval(()=>{
+  const ahora = new Date().getTime();
+  const diferencia = ahora - inicio;
+
+  const dias = Math.floor(diferencia / (1000*60*60*24));
+  const horas = Math.floor((diferencia / (1000*60*60)) % 24);
+
+  document.getElementById("contador").innerHTML =
+  "Mi amor por ti comenzó hace " + dias + " días y " + horas + " horas ❤️";
+},1000);
+</script>
+
+</body>
+</html>
